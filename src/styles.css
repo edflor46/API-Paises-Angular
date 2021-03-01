@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+li{
+    cursor: pointer;
+    color: #000;
+}
+
+table, td, th{
+    color: #fff;
+}
+
+.small-flag{
+    width: 50px;
+}
+
+h1, h2, h3, h4, h5{
+    color: #fff;
+}
+body{
+    background-color: rgb(44, 43, 43);
+    color: #fff;
+    
+}

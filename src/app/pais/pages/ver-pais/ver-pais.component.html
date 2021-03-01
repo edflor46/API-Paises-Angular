@@ -1,0 +1,59 @@
+<div *ngIf="!pais; else paisInfo;" class="alert alert-info"> Espere Por favor... </div>
+
+
+<ng-template #paisInfo>
+    <div class="row">
+        <div class="col">
+            <h1>Pais <small>{{pais.name}}</small></h1>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <h3>Bandera</h3>
+            <img class="img-thumbnail" [src]="pais.flag" alt="">
+        </div>
+
+
+        <div class="col">
+            <h3>Informacion</h3>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Poblacion</strong>
+                    {{pais.population | number}}
+                </li>
+            </ul>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Codigo numerico</strong>
+                    {{pais.numericCode}}
+                </li>
+            </ul>
+        
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Codigo alpha3</strong>
+                    {{pais.alpha3Code}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <h3>Traducciones</h3>
+    <div class="col">
+        <span class="badge bg-primary m-1">{{pais.translations.de}}</span>
+        <span class="badge bg-success m-1">{{pais.translations.es}}</span>
+        <span class="badge bg-danger m-1">{{pais.translations.fr}}</span>
+        <span class="badge bg-warning m-1">{{pais.translations.ja}}</span>
+        <span class="badge bg-secondary m-1">{{pais.translations.it}}</span>
+        <span class="badge bg-info m-1">{{pais.translations.br}}</span>
+        <span class="badge bg-dark m-1">{{pais.translations.pt}}</span>
+        <span class="badge bg-light m-1 text-dark">{{pais.translations.nl}}</span>
+        <span class="badge bg-warning m-1">{{pais.translations.hr}}</span>
+        <span class="badge bg-danger m-1">{{pais.translations.fa}}</span>
+    </div>
+</ng-template>
+
+
